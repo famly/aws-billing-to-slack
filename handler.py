@@ -14,6 +14,23 @@ week_ago = today - datetime.timedelta(days=n_days)
 # Also, leaving out the full block because Slack doesn't like it: '█'
 sparks = ['▁', '▂', '▃', '▄', '▅', '▆', '▇']
 
+short_names = {
+    "Amazon Relational Database Service": "RDS",
+    "Amazon Elastic Compute Cloud - Compute": "EC2 - Compute",
+    "Savings Plans for AWS Compute usage": "Savings Plans",
+    "Amazon Simple Storage Service": "S3",
+}
+
+# This is used to show accounts in a nice way in the output
+account_names_mapping = {
+    "306741224501": "famly_co",
+    "157858771872": "brighthorizons",
+    "380876067318": "famlydev",
+    "849294456676": "staging",
+    "955498850864": "QRVey staging",
+    "337937856221": "QRVey prod"
+}
+
 def sparkline(datapoints):
     lower = min(datapoints)
     upper = max(datapoints)
